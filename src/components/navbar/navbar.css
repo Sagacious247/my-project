@@ -1,0 +1,137 @@
+.navbar-section {
+    position: fixed;
+    height: 6rem;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    transition: .3s ease-in;
+    z-index: 3;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.backgroundBg{
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 75rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo span {
+    color: #fff;
+    font-size: 10px;
+}
+.logo span h1{
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    object-fit: contain;
+}
+.desktopListItem{
+    margin: 1rem;
+    cursor: pointer;
+}
+.desktopListItem:hover{
+        padding-bottom: 0.5rem;
+        color: gold;
+        border-bottom: 2px solid gold;
+        transition: .3s;
+}
+.contactBtn p {
+    margin-bottom: 10px;
+}
+.contactInfoBtn {
+    background-color: gold;
+    color: #000;
+    border-radius: 3px;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+.menu{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: .3s ease-in-out;
+    width: 30px;
+    height: 30px;
+}
+.mobileMenu{
+    display: none;
+}
+.contactMobileBtn{
+    display: none;
+}
+@media screen and (max-width: 820px) {
+
+    .navbar-section {
+    border-bottom: 2px greenyellow solid;
+    background-color: #000;
+    }
+    .menu {
+        display: flex;
+    }
+    .navDestopMenu{
+        display: none;
+    }
+    .contactBtn{ 
+        display: none;
+    }
+    .mobileMenu{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 6rem;
+        width: 70%;
+        height: fit-content;
+        left: -100%;
+        background-color: rgba(0, 0, 0, .9);
+        transition: .3s;
+        text-align: center;
+        z-index: 999;
+        padding: .5rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    .activeMenu{
+        left: 0;
+    }
+   
+    .mobileListItem {
+        display: flex;
+        background-color: rgb(30, 30, 30);
+            transition: .3s;
+            cursor: pointer;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 2rem;
+    }
+    .contactMobileBtn{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mobileListItem:hover{
+        transform: translateY(-2px);
+        color: gold;
+    }
+
+}
